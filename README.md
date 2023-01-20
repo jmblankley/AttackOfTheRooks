@@ -23,8 +23,8 @@ Author: Joshua M. Blankley
 
 DEV LOG
 --------------------------------------------------------------------------------------------------
-Day 1:
-1/19/2023
+Day 1 (1/19/2023)
+_________________
 
 Pseudocode written out. Ended up making some tweaks because I realized I did not need a while loop 
 to get the first two values in the text file.
