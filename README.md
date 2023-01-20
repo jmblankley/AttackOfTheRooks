@@ -1,4 +1,4 @@
-#AttackOfTheRooks
+AttackOfTheRooks
 
 CSC24400 Project #1
 
@@ -21,9 +21,9 @@ Author: Joshua M. Blankley
 
 
 
-##DEV LOG
+DEV LOG
 --------------------------------------------------------------------------------------------------
-###Day 1 (1/19/2023)
+Day 1 (1/19/2023)
 -----------------
 Pseudocode written out. Ended up making some tweaks because I realized I did not need a while loop 
 to get the first two values in the text file.
