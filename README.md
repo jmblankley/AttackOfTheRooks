@@ -1,4 +1,5 @@
-#AttackOfTheRooks
+AttackOfTheRooks
+
 CSC24400 Project #1
 
 Author: Joshua M. Blankley
