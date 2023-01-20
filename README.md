@@ -34,6 +34,8 @@ up falling back on Visual Studio for now. Hopefully I can get that sorted soon.
 So far I have the file being read in successfully and stored the first two values in variables to 
 be used in the 2d array.
 
+Stopping Point: Tried figuring out how to put char's read from reader into array.
+
 
 
 I was able to get the array built with empty char's based on the dimensions pulled from the text
