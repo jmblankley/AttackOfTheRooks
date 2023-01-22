@@ -38,3 +38,12 @@ I was able to get the array built with empty char's based on the dimensions pull
 file.
 
 Stopping Point: Tried figuring out how to put char's read from reader into array.
+
+
+Day 2 (1/21/2023)
+-----------------
+Stuck on trying to get the text from file into the array. I am getting the right chars printed out
+in the console, but they are not in the grid I have created. Giving up for now, gonna get help in 
+Monday's office hours.
+
+Stopping Point: Same as before.
