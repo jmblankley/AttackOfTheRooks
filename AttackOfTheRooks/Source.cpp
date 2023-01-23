@@ -36,6 +36,9 @@ void printGrid(int rowCount, int colCount)
     }
 }
 
+
+//this function takes in our ifstream and stores it in our 2d array
+//Dr. Blythe helped a lot on this part
 void readGrid(int rowCount, int colCount, ifstream &input)
 {
     for (int r = 0; r < rowCount; r++)
@@ -59,6 +62,7 @@ int main(int argc, char *argv[])
 
     // uses fstream to read the filename given by the user and store
     // opens file
+    //READER IS NOT A TYPE--->IFSTREAM IS A TYPE AND READER IS THE VARIABLE NAME
     ifstream reader(fname);
 
     // next two if statements handles errors
@@ -79,8 +83,11 @@ int main(int argc, char *argv[])
     // takes the first two values of our text file and stores them in variables to later construct the 2d array
     reader >> row >> col;
 
+    //call this function, pass it our row and col size taken from input file and which input file to use
+    //this will store the info from our text file in an array of the proper size with the proper char's
     readGrid(row, col, reader);
 
+    //call this function to print out the 2d array we just filled in readGrid()
     printGrid(row, col);
     return 0;
 }
