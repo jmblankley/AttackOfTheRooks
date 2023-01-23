@@ -4,16 +4,13 @@
 #define MAXSIZE 100
 using namespace std;
 
-
-//initalize an empty 2d array to be filled with input from user selected file
+// initalize an empty 2d array to be filled with input from user selected file
 char rooks[MAXSIZE][MAXSIZE];
 int row, col;
+char input;
 
-
-
-
-//initalizes an empty 2d array with the max size of 100 spaces
-//will be filled with input from a text file
+// initalizes an empty 2d array with the max size of 100 spaces
+// will be filled with input from a text file
 void initGrid()
 {
     for (int r = 0; r < MAXSIZE; r++)
@@ -25,10 +22,8 @@ void initGrid()
     }
 }
 
-
-
-//prints out our empty grid
-//used to test if our input was getting put into the grid
+// prints out our empty grid
+// used to test if our input was getting put into the grid
 void printGrid(int rowCount, int colCount)
 {
     for (int r = 0; r < rowCount; r++)
@@ -41,30 +36,32 @@ void printGrid(int rowCount, int colCount)
     }
 }
 
+void readGrid(int rowCount, int colCount, ifstream &input)
+{
+    for (int r = 0; r < rowCount; r++)
+    {
+        for (int c = 0; c < colCount; c++)
+        {
+            char var;
+            input >> var;
+            rooks[r][c] = var;
+        }
+    }
+}
 
-
-
-
-
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 
-    //ask user for input
+    // ask user for input
     string fname;
     cout << "Please enter the name of an input file: ";
     cin >> fname;
 
-    //uses fstream to read the filename given by the user and store
-    //opens file
+    // uses fstream to read the filename given by the user and store
+    // opens file
     ifstream reader(fname);
 
-
-
-
-    
-
-
-    //next two if statements handles errors
+    // next two if statements handles errors
     if (!reader)
     {
         // cerr prints out where you want to print out errors
@@ -72,42 +69,29 @@ int main(int argc, char* argv[])
         // ends the current function
         return 1;
     }
-    //returns error if nothing is in the file
+    // returns error if nothing is in the file
     if (!reader)
     {
         cerr << "File had no data in it!!!" << endl;
         return 2;
     }
 
-    
-
-
-
-    //takes the first two values of our text file and stores them in variables to later construct the 2d array
+    // takes the first two values of our text file and stores them in variables to later construct the 2d array
     reader >> row >> col;
-    initGrid();
-    //checking if my grid is establishing properly
-    //will take out in final version
+
+    // initGrid();
+
+    // moves reader along to next char in file
+    // reader >> input;
+
+    // while (reader)
+    //{
+    //   cout << input;
+    // reader >> input; // stops reader when it runs out of char
+    //}
+
+    readGrid(row, col, reader);
+
     printGrid(row, col);
-
-
-
-    char input;
-    //moves reader along to next char in file
-    reader >> input;
-
-    while (reader)
-    {
-        cout << input;
-        reader >> input; //stops reader when it runs out of char
-        
-    }
-
-
-	return 0;
+    return 0;
 }
-
-
-
-
-
