@@ -52,3 +52,10 @@ Stopping Point: Same as before.
 Day 3 (1/23/2023)
 -----------------
 Finally figured out how to read the file and store it in the 2d array. Had to go to office hours.
+Added another function called gridRead() that takes in our file and stores it into our 2d array.
+My issue was that I was trying to combine this extra function with a seperate function printGrid.
+Another big issue I was running into, was I was treating "reader" like a type and not a variable.
+"reader" has a type of ifstream. This info was extremely useful.
+
+Stopping Point: Need to sort array to see if any "R's" intersect on the grid, and there are no "#'s"
+between.
