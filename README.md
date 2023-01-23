@@ -47,3 +47,8 @@ in the console, but they are not in the grid I have created. Giving up for now, 
 Monday's office hours.
 
 Stopping Point: Same as before.
+
+
+Day 3 (1/23/2023)
+-----------------
+Finally figured out how to read the file and store it in the 2d array. Had to go to office hours.
