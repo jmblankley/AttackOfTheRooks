@@ -58,4 +58,4 @@ Another big issue I was running into, was I was treating "reader" like a type an
 "reader" has a type of ifstream. This info was extremely useful.
 
 Stopping Point: Need to sort array to see if any "R's" intersect on the grid, and there are no "#'s"
-between.
+between. Also, consider moving our code that is just reading in the text file into it's own function.
