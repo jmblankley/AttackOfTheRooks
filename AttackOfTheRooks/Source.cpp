@@ -79,17 +79,6 @@ int main(int argc, char *argv[])
     // takes the first two values of our text file and stores them in variables to later construct the 2d array
     reader >> row >> col;
 
-    // initGrid();
-
-    // moves reader along to next char in file
-    // reader >> input;
-
-    // while (reader)
-    //{
-    //   cout << input;
-    // reader >> input; // stops reader when it runs out of char
-    //}
-
     readGrid(row, col, reader);
 
     printGrid(row, col);
