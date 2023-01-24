@@ -52,6 +52,17 @@ void readGrid(int rowCount, int colCount, ifstream &input)
     }
 }
 
+void rookAttacks(int rowCount, int colCount)
+{
+    for (int r = 0; r < rowCount; r++)
+    {
+        for (int c = 0; c < colCount; c++)
+        {
+            
+        }
+    }
+}
+
 int main(int argc, char *argv[])
 {
 
@@ -89,5 +100,7 @@ int main(int argc, char *argv[])
 
     //call this function to print out the 2d array we just filled in readGrid()
     printGrid(row, col);
+
+    rookAttacks(row, col);
     return 0;
 }
