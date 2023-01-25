@@ -7,9 +7,13 @@ Author: Joshua M. Blankley
 I split my time developing this project between Visual Studio, Fedora, and WSL 2. 
 
 My Process:
+
 Read and understand the problem
+
 Write out psuedocode to solve the problem
+
 Construct functions that solve each step in my psuedocode to be called in main
+
 Call the functions in main to complete the solution
 
 
