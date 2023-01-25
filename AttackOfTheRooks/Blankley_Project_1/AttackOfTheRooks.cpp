@@ -38,6 +38,7 @@ void printGrid(int rowCount, int colCount)
 
 
 //this function takes in our ifstream and stores it in our 2d array
+//Dr. Blythe helped a lot on this part
 void readGrid(int rowCount, int colCount, ifstream &input)
 {
     for (int r = 0; r < rowCount; r++)
@@ -57,36 +58,7 @@ void rookAttacks(int rowCount, int colCount)
     {
         for (int c = 0; c < colCount; c++)
         {
-            if (rooks[r][c] == 'R')
-            {
-                for (int cc = c + 1; cc < colCount; cc++)
-                {
-                    if(rooks[r][cc] == '#')
-                    {
-                        cout << "cannot be attacked";
-                        break;
-                    }
-                    if (rooks[r][cc] == 'R')
-                    {
-                        cout << "attacked" << endl;
-                    }
-                }
-                for (int rr = r + 1; rr < rowCount; rr++)
-                {
-                    if (rooks[rr][c] == '#')
-                    {
-                        cout << "cannot be attacked";
-                        break;
-                    }
-                    if (rooks[rr][c] == 'R')
-                    {
-                        cout << "attacked" << endl;
-                    }
-                }
-               
-                    
-            }
-
+            
         }
     }
 }
@@ -101,6 +73,7 @@ int main(int argc, char *argv[])
 
     // uses fstream to read the filename given by the user and store
     // opens file
+    //READER IS NOT A TYPE--->IFSTREAM IS A TYPE AND READER IS THE VARIABLE NAME
     ifstream reader(fname);
 
     // next two if statements handles errors
