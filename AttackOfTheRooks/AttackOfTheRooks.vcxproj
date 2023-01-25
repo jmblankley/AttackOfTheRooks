@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="AttackOfTheRooks.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="input1.txt" />
