@@ -56,3 +56,12 @@ Another big issue I was running into, was I was treating "reader" like a type an
 
 Stopping Point: Need to sort array to see if any "R's" intersect on the grid, and there are no "#'s"
 between. Also, consider moving our code that is just reading in the text file into it's own function.
+
+
+Day 4 (1/25/2023)
+-----------------
+Got the function rookAttacks working. Big help in lab help hours. I was just a little off in my if
+statements.
+
+Stopping Point: rookAttacks needs to break in a different way, it is printing out a statement from
+both the column and row for loops.
