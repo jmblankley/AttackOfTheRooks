@@ -51,6 +51,9 @@ void readGrid(int rowCount, int colCount, ifstream &input)
     }
 }
 
+
+//this function checks each row and column for Rooks and Blocks to see if the rooks can attack
+//or not attack
 void rookAttacks(int rowCount, int colCount)
 {
     for (int r = 0; r < rowCount; r++)
@@ -63,7 +66,6 @@ void rookAttacks(int rowCount, int colCount)
                 {
                     if(rooks[r][cc] == '#')
                     {
-                        cout << "cannot be attacked";
                         break;
                     }
                     if (rooks[r][cc] == 'R')
@@ -75,18 +77,14 @@ void rookAttacks(int rowCount, int colCount)
                 {
                     if (rooks[rr][c] == '#')
                     {
-                        cout << "cannot be attacked";
                         break;
                     }
                     if (rooks[rr][c] == 'R')
                     {
                         cout << "attacked" << endl;
                     }
-                }
-               
-                    
+                }   
             }
-
         }
     }
 }
