@@ -1,8 +1,13 @@
+// author: Joshua Blankley
+// version: 1/26/2023
+
 #include <iostream>
 #include <fstream>
 #define EMPTY '.'
 #define MAXSIZE 100
 using namespace std;
+// minimum comments
+// explain every block of code (general explaination)
 
 // initalize an empty 2d array to be filled with input from user selected file
 char rooks[MAXSIZE][MAXSIZE];
@@ -36,8 +41,7 @@ void printGrid(int rowCount, int colCount)
     }
 }
 
-
-//this function takes in our ifstream and stores it in our 2d array
+// this function takes in our ifstream and stores it in our 2d array
 void readGrid(int rowCount, int colCount, ifstream &input)
 {
     for (int r = 0; r < rowCount; r++)
@@ -51,20 +55,21 @@ void readGrid(int rowCount, int colCount, ifstream &input)
     }
 }
 
-
-//this function checks each row and column for Rooks and Blocks to see if the rooks can attack
-//or not attack
+// this function checks each row and column for Rooks and Blocks to see if the rooks can attack
+// or not attack
 void rookAttacks(int rowCount, int colCount)
 {
+    // iterates through the rows and columns of the 2d array
     for (int r = 0; r < rowCount; r++)
     {
         for (int c = 0; c < colCount; c++)
         {
+            // checks for char 'R', if it comes across one, iterates through the remaining items in the array checking for blocks ("#") or rooks ('R')
             if (rooks[r][c] == 'R')
             {
                 for (int cc = c + 1; cc < colCount; cc++)
                 {
-                    if(rooks[r][cc] == '#')
+                    if (rooks[r][cc] == '#')
                     {
                         break;
                     }
@@ -83,7 +88,7 @@ void rookAttacks(int rowCount, int colCount)
                     {
                         cout << "attacked" << endl;
                     }
-                }   
+                }
             }
         }
     }
@@ -98,15 +103,14 @@ int main(int argc, char *argv[])
     cin >> fname;
 
     // uses fstream to read the filename given by the user and store
-    // opens file
     ifstream reader(fname);
 
     // next two if statements handles errors
+    // returns error if file is un-openable
     if (!reader)
     {
-        // cerr prints out where you want to print out errors
+
         cerr << "Could not open \"" << fname << '"' << endl;
-        // ends the current function
         return 1;
     }
     // returns error if nothing is in the file
@@ -116,14 +120,13 @@ int main(int argc, char *argv[])
         return 2;
     }
 
-    // takes the first two values of our text file and stores them in variables to later construct the 2d array
+    // takes the first two values of our text file and stores them in variables to construct the 2d array
     reader >> row >> col;
 
-    //call this function, pass it our row and col size taken from input file and which input file to use
-    //this will store the info from our text file in an array of the proper size with the proper char's
+    // call this function, pass it our row and col size taken from input file as well as what ifstream we need to read
     readGrid(row, col, reader);
 
-    //call this function to print out the 2d array we just filled in readGrid()
+    // call this function to print out the 2d array we just filled in readGrid()
     printGrid(row, col);
 
     rookAttacks(row, col);
