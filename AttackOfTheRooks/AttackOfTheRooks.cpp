@@ -42,6 +42,10 @@ void readGrid(int rowCount, int colCount, ifstream &input)
     }
 }
 
+void readFile(string fname)
+{
+}
+
 // this function checks each row and column for Rooks and Blocks to see if the rooks can attack
 // or not attack
 void rookAttacks(int rowCount, int colCount)
@@ -54,29 +58,34 @@ void rookAttacks(int rowCount, int colCount)
             // checks for char 'R', if it comes across one, iterates through the remaining items in the array checking for blocks ("#") or rooks ('R')
             if (rooks[r][c] == 'R')
             {
+                // look through the remaining columns for # or R
+                // returns to main if it finds either
                 for (int cc = c + 1; cc < colCount; cc++)
                 {
                     if (rooks[r][cc] == '#')
                     {
-                        cout << "No attack" << endl;
+                        cout << "No two rooks can attack each other." << endl;
+                        // returns to main when it finds a '#'
                         return;
                     }
                     if (rooks[r][cc] == 'R')
                     {
-                        cout << "attacked" << endl;
+                        cout << "At least two rooks can attack each other." << endl;
                         return;
                     }
                 }
+                // look through the remaining rows for # or R
+                // returns to main if it find either
                 for (int rr = r + 1; rr < rowCount; rr++)
                 {
                     if (rooks[rr][c] == '#')
                     {
-                        cout << "No attack" << endl;
+                        cout << "No two rooks can attack each other" << endl;
                         return;
                     }
                     if (rooks[rr][c] == 'R')
                     {
-                        cout << "attacked" << endl;
+                        cout << "At least two rooks can attack each other." << endl;
                         return;
                     }
                 }
