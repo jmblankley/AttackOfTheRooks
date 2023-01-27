@@ -14,19 +14,6 @@ char rooks[MAXSIZE][MAXSIZE];
 int row, col;
 char input;
 
-// initalizes an empty 2d array with the max size of 100 spaces
-// will be filled with input from a text file
-void initGrid()
-{
-    for (int r = 0; r < MAXSIZE; r++)
-    {
-        for (int c = 0; c < MAXSIZE; c++)
-        {
-            rooks[r][c] = EMPTY;
-        }
-    }
-}
-
 // prints out our empty grid
 // used to test if our input was getting put into the grid
 void printGrid(int rowCount, int colCount)
@@ -71,22 +58,26 @@ void rookAttacks(int rowCount, int colCount)
                 {
                     if (rooks[r][cc] == '#')
                     {
-                        break;
+                        cout << "No attack" << endl;
+                        return;
                     }
                     if (rooks[r][cc] == 'R')
                     {
                         cout << "attacked" << endl;
+                        return;
                     }
                 }
                 for (int rr = r + 1; rr < rowCount; rr++)
                 {
                     if (rooks[rr][c] == '#')
                     {
-                        break;
+                        cout << "No attack" << endl;
+                        return;
                     }
                     if (rooks[rr][c] == 'R')
                     {
                         cout << "attacked" << endl;
+                        return;
                     }
                 }
             }
@@ -130,5 +121,6 @@ int main(int argc, char *argv[])
     printGrid(row, col);
 
     rookAttacks(row, col);
+
     return 0;
 }
